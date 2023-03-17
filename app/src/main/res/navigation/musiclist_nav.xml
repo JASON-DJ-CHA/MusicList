@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/musiclist_nav"
+    app:startDestination="@id/firstFragment">
+
+    <fragment
+        android:id="@+id/firstFragment"
+        android:name="com.jason.example.musiclist.Fragment.FirstFragment"
+        android:label="fragment_first"
+        tools:layout="@layout/fragment_list1" >
+        <action
+            android:id="@+id/action_firstFragment_to_list2Fragment"
+            app:destination="@id/list2Fragment" />
+        <action
+            android:id="@+id/action_firstFragment_to_list3Fragment"
+            app:destination="@id/list3Fragment" />
+        <action
+            android:id="@+id/action_firstFragment_to_list4Fragment"
+            app:destination="@id/list4Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/list2Fragment"
+        android:name="com.jason.example.musiclist.Fragment.List2Fragment"
+        android:label="fragment_list2"
+        tools:layout="@layout/fragment_list2" >
+        <action
+            android:id="@+id/action_list2Fragment_to_firstFragment"
+            app:destination="@id/firstFragment" />
+        <action
+            android:id="@+id/action_list2Fragment_to_list3Fragment"
+            app:destination="@id/list3Fragment" />
+        <action
+            android:id="@+id/action_list2Fragment_to_list4Fragment"
+            app:destination="@id/list4Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/list3Fragment"
+        android:name="com.jason.example.musiclist.Fragment.List3Fragment"
+        android:label="fragment_list3"
+        tools:layout="@layout/fragment_list3" >
+        <action
+            android:id="@+id/action_list3Fragment_to_list2Fragment"
+            app:destination="@id/list2Fragment" />
+        <action
+            android:id="@+id/action_list3Fragment_to_firstFragment"
+            app:destination="@id/firstFragment" />
+        <action
+            android:id="@+id/action_list3Fragment_to_list4Fragment"
+            app:destination="@id/list4Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/list4Fragment"
+        android:name="com.jason.example.musiclist.Fragment.List4Fragment"
+        android:label="fragment_list4"
+        tools:layout="@layout/fragment_list4" >
+        <action
+            android:id="@+id/action_list4Fragment_to_firstFragment"
+            app:destination="@id/firstFragment" />
+        <action
+            android:id="@+id/action_list4Fragment_to_list2Fragment"
+            app:destination="@id/list2Fragment" />
+        <action
+            android:id="@+id/action_list4Fragment_to_list3Fragment"
+            app:destination="@id/list3Fragment" />
+    </fragment>
+</navigation>
